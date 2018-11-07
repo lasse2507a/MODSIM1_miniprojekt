@@ -149,4 +149,4 @@ plt.show()
 
 slut = time.time()
 print("Det tager {:g} sekunder at eksekvere {} simuleringer for {} år".format(slut-start,antal_simuleringer,antal_år))
-print("Der er {} landingsbaner efter {} år, og der er behov for at anlægge nye baner i årene {}".format(antal_baner2, antal_år, ny_bane))
+print("Der bør være {} landingsbaner efter {} år, og der er behov for at anlægge nye baner i årene {}".format(antal_baner2, antal_år, ny_bane))
