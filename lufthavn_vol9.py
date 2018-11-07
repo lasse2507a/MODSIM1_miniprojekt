@@ -11,14 +11,16 @@ import matplotlib.pyplot as plt
 
 start = time.time()
 
-antal_år = 12 #maks 84
-antal_simuleringer = 500
+antal_år = 30 #maks 84
+antal_simuleringer = 100
 antal_baner = 1
-maks_ventetid = 300
+maks_ventetid = 200
 
 antal_baner2 = antal_baner
+
 årligt_gennemsnit = []
 årligt_gennemsnit2 = []
+ny_bane = []
 
 for f in range(0, 2):
 
@@ -29,6 +31,8 @@ for f in range(0, 2):
         if år > 0 and f == 1:
             if gennemsnit_bane_ventetid > maks_ventetid:
                 antal_baner2 += 1
+                ny_bane.append(år-1)
+                
 
         for i in range(antal_simuleringer):
             # ================================================================
@@ -143,4 +147,4 @@ plt.show()
 
 slut = time.time()
 print("Det tager {:g} sekunder at eksekvere {} simuleringer for {} år".format(slut-start,antal_simuleringer,antal_år))
-print("Der er {} landingsbaner efter {} år".format(antal_baner2, antal_år))
+print("Der er {} landingsbaner efter {} år, og der er behov for at anlægge nye baner i årene {}".format(antal_baner2, antal_år,ny_bane))
