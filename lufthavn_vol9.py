@@ -12,9 +12,9 @@ import matplotlib.pyplot as plt
 start = time.time()
 
 antal_år = 30 #maks 84
-antal_simuleringer = 100
+antal_simuleringer = 200
 antal_baner = 1
-maks_ventetid = 200
+maks_ventetid = 180
 
 antal_baner2 = antal_baner
 
@@ -132,16 +132,18 @@ for f in range(0, 2):
 
 plt.style.use(['dark_background'])
 plt.plot(range(0, antal_år), årligt_gennemsnit, "bo-")
-plt.title("Udvikling af den gennemsnitlige ventetid med {} landingsbane(r)".format(antal_baner))
+plt.title("Gennemsnitlig ventetid med {} landingsbane(r)".format(antal_baner))
 plt.xlabel("År")
 plt.ylabel("Gns. ventetid")
+plt.savefig("ventetid_uden_nye_baner.png")
 plt.show()
 
 plt.plot(range(0, antal_år), årligt_gennemsnit2, "ro")
-plt.title("Udvikling af den gennemsnitlige ventetid med konstruktion af landingsbaner")
+plt.title("Gennemsnitlig ventetid med konstruktion af landingsbaner")
 plt.xlabel("År")
 plt.ylabel("Gns. ventetid")
 plt.grid(axis = 'both')
+plt.savefig("ventetid_med_baner.png")
 plt.show()
 
 
