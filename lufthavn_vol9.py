@@ -112,7 +112,7 @@ for f in range(0, 2):
             # ================================================================
             # Beregning af køtider og fordeling af fly på baner
             # ================================================================
-            bane_køtid = np.array([0 for i in range(antal_baner2)])
+            bane_køtid = np.array([0 for i in range(antal_baner2)]) #kunne erstates af np.zeros
 
             for i in range(0, antal_fly):
                 bane_køtid = bane_køtid - ankomst_shuffled[i]
